@@ -50,7 +50,8 @@ class SpotifyTrackFinderServiceIntegrationTest {
         public void initialize(ConfigurableApplicationContext context) {
             TestPropertyValues
                     .of(
-                            "spring.redis.port=" + redis.getMappedPort(6379)
+                            "spring.redis.port=" + redis.getMappedPort(6379),
+                            "spring.redis.host=" + redis.getContainerIpAddress()
                     )
                     .applyTo(context.getEnvironment());
 

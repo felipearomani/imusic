@@ -1,0 +1,23 @@
+version: "3"
+services:
+  redis:
+    image: redis:5
+    ports:
+      - "6379:6379"
+    expose:
+      - "6379"
+
+  imusic:
+    image: felipearomani/imusic:latest
+    depends_on:
+      - redis
+    ports:
+      - "8080:8080"
+    expose:
+      - "8080"
+    environment:
+      - "OPEN_WEATHER_APP_ID=c8bcbd47d4d43489f7acd533b98ca69c"
+      - "SPOTIFY_CLIENT_ID=eff3b4fc7848443bbdaa937d562aff1b"
+      - "SPOTIFY_CLIENT_SECRET=36c6c5e2ed5d4ca79d0beab112c72b95"
+      - "REDIS_HOST=redis"
+      - "REDIS_PORT=6379"
