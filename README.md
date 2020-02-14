@@ -4,7 +4,7 @@ IMusic é um serviço de indicação musical baseado na sua localização.
 
 ## Como rodar a aplicação
 
-Para rodas os testes e a aplicação é necessário ter registro e obter as credenciais de acesso nos seguintes sites:
+Para executar os testes e a aplicação é necessário ter registro e obter as credenciais de acesso nos seguintes sites:
 - https://openweathermap.org
 - https://developer.spotify.com
 
